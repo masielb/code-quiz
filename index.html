@@ -1,8 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Code Quiz</title>
-        <
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <!-- Bootstrap Link-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
+
+    <body>
+        <header class="container">
+            <div class="card-body">
+                <a type="button" id="score" onclick="showHighScores()">View High Scores</a>
+                <a id="timer" class="float-right">Timer</a>
+            </div>
+        </header>
+
+        <main class="container">
+            <!-- Initial Page -->
+            <div id="quizChallengePage" class="card-body p-6 mt-5 text-center">
+                <h1 id="start">Coding Quiz Challenge</h1>
+                <p id="explanation">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                <div id="button">   
+                    <button id="submitButton" class ="btn active" type="button">Start Quiz</button>
+                </div>
+            </div>
+
+            <div id="quizQuestions"></div>
+
+        </main>
+
+    </body>
 </html>

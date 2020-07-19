@@ -1,1 +1,6 @@
 /* stlying for the elements */
+
+#explanation {
+    padding-left:10em;
+    padding-right:10em;
+}
