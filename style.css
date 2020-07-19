@@ -1,10 +1,28 @@
 /* stlying for the elements */
 
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
 #explanation {
     padding-left:10em;
     padding-right:10em;
 }
 
 button {
-    background-color: purple;
+    background-color: #8064A2 !important;
+    border-color: #8064A2 !important;
+    color: white !important;
+    padding: 0px 12px 0px 12px !important;
+}
+
+.btn:hover {
+    text-align: center !important;
+    background-color: #b888f1  !important;
+    border-color: #b888f1 !important;
+    color: white !important;
+    padding: 0px 12px 0px 12px !important;
 }
