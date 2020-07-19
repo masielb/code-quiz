@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <!-- Bootstrap Link-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="script.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -17,19 +18,53 @@
             </div>
         </header>
 
-        <main class="container">
+        <main class="container text-center">
             <!-- Initial Page -->
-            <div id="quizChallengePage" class="card-body p-6 mt-5 text-center">
+            <div id="quizChallengePage" class="card-body mt-5">
                 <h1 id="start">Coding Quiz Challenge</h1>
                 <p id="explanation">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
                 <div id="button">   
                     <button id="submitButton" class ="btn active" type="button">Start Quiz</button>
                 </div>
             </div>
+            <!-- Questions -->
+            <div id="quizQuestionsPage">
+                <h2 id="quizQuestion"></h2>
+                <ul>
+                    <li><button type="button" class="btn questionBtn" id="one"></button></li>
+                    <li><button type="button" class="btn questionBtn" id="two"></button></li>
+                    <li><button type="button" class="btn questionBtn" id="three"></button></li>
+                    <li><button type="button" class="btn questionBtn" id="four"></button></li>
+                    <li><button type="button" class="btn questionBtn" id="five"></button></li>
+                </ul>
+                <!-- Incorrect or Correct Grade -->
+                <div id="grade"></div>
+            </div>
+            <!-- All Done -->
+            <div id="donePage">
+                <h2 id="allDone">All done!</h2>
+                <h3 id="finalScore"></h3>
+                <!-- Initials Input w/ Button Addon -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Initials" aria-label="Initials" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+                    </div>
+                </div>
+            </div> 
 
-            <div id="quizQuestions"></div>
-
+            <!-- View Highscores -->
+            <div id="viewHighscores">
+                <h2 id="highScores">Highscores</h2>
+                <p id="highScoreList"></p>
+                <div class="col-sm-12 text-center">
+                    <button id="goBack" class="btn" type="button">Go Back</button>
+                    <button id="clearHighScore" class="btn" value="reset-form" type="button">Clear Highscores</button>
+                </div>
+            </div>
         </main>
+
+        <footer></footer>
 
     </body>
 </html>
