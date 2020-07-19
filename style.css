@@ -12,6 +12,10 @@
     padding-right:10em;
 }
 
+li {
+    list-style: none;
+}
+
 button {
     background-color: #8064A2 !important;
     border-color: #8064A2 !important;

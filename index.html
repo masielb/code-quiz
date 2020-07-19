@@ -16,7 +16,7 @@
     <body>
         <header class="container">
             <div class="card-body">
-                <a type="button" id="score" onclick="showHighScores()">View High Scores</a>
+                <a id="score" type="button" onclick="showHighScores()">View High Scores</a>
                 <a id="timer" class="float-right">Timer</a>
             </div>
         </header>
@@ -27,36 +27,36 @@
                 <h1 id="start">Coding Quiz Challenge</h1>
                 <p id="explanation">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
                 <div id="button">   
-                    <button id="submitButton" class ="btn active" type="button">Start Quiz</button>
+                    <button id="startBtn" class ="btn active" type="button">Start Quiz</button>
                 </div>
             </div>
-            <!-- Questions -->
+            <!-- Questions Pages-->
             <div id="quizQuestionsPage">
                 <h2 id="quizQuestion"></h2>
                 <ul>
-                    <li><button type="button" class="btn questionBtn" id="one"></button></li>
-                    <li><button type="button" class="btn questionBtn" id="two"></button></li>
-                    <li><button type="button" class="btn questionBtn" id="three"></button></li>
-                    <li><button type="button" class="btn questionBtn" id="four"></button></li>
-                    <li><button type="button" class="btn questionBtn" id="five"></button></li>
+                    <li><button id="one" type="button" class="btn questionBtn">1</button></li>
+                    <li><button id="two" type="button" class="btn questionBtn">2</button></li>
+                    <li><button id="three" type="button" class="btn questionBtn">3</button></li>
+                    <li><button id="four" type="button" class="btn questionBtn">4</button></li>
                 </ul>
                 <!-- Incorrect or Correct Grade -->
                 <div id="grade"></div>
             </div>
-            <!-- All Done -->
+            <!-- All Done Page-->
             <div id="donePage">
                 <h2 id="allDone">All done!</h2>
-                <h3 id="finalScore"></h3>
+                <h3 id="finalScoreIs"></h3>
                 <!-- Initials Input w/ Button Addon -->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Initials" aria-label="Initials" aria-describedby="button-addon2">
+                    <h4> Enter initials: </h4>
+                    <input id="initialInput" type="text" class="form-control" placeholder="Initials" aria-label="Initials" aria-describedby="button-addon2">
                     <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+                    <button id="initialBtn" class="btn btn-outline-secondary" type="button">Submit</button>
                     </div>
                 </div>
             </div> 
 
-            <!-- View Highscores -->
+            <!-- View Highscores Page -->
             <div id="viewHighscores">
                 <h2 id="highScores">Highscores</h2>
                 <p id="highScoreList"></p>
