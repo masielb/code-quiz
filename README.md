@@ -14,4 +14,4 @@ Overall, this project involved a great deal of javascript to power this tool.
 
 Link: https://masielb.github.io/code-quiz/
 
-![Screenshot](screenshot.png)
+![code quiz screenshot](screenshot.png "Screenshot")
