@@ -1,9 +1,8 @@
 //VARIABLES
 var header = document.querySelector(".header");
 var score = document.getElementById("score");
-var submitBtn = document.getElementById("submitBtn");
-
 var quizChallengePage = document.getElementById("quizChallengePage");
+var submitBtn = document.getElementById("submitBtn");
 
 var quizQuestionsPage = document.getElementById("quizQuestionsPage");
 var quizQuestionHeader = document.getElementById("quizQuestionHeader");
@@ -31,12 +30,12 @@ var timer = document.getElementById("timer");
 // QUIZ QUESTION ARRAY
 var quizQuestions = [
   {
-  "quizQuestionHeader" : "Commonly used Data Types do NOT Include:", 
-  "one" : "1. strings",
-  "two" : "2. booleans",
-  "three" : "3. alerts",
-  "four" : "4. numbers",
-  "correct" : "3. alerts",
+  "quizQuestionHeader" : "Arrays in JavaScript can be used to store ________.",
+  "one" : "1. numbers and strings",
+  "two" : "2. other arrays",
+  "three" : "3. booleans",
+  "four" : "4. all of the above",
+  "correct" : "4. all of the above",
   },{
   "quizQuestionHeader" : "The condition in an if / else statement is enclosed within ________.",
   "one" : "1. quotes",
@@ -45,12 +44,12 @@ var quizQuestions = [
   "four" : "4. square brackets",
   "correct" : "3. parenthesis",
   },{
-  "quizQuestionHeader" : "Arrays in JavaScript can be used to store ________.",
-  "one" : "1. numbers and strings",
-  "two" : "2. other arrays",
-  "three" : "3. booleans",
-  "four" : "4. all of the above",
-  "correct" : "4. all of the above",
+  "quizQuestionHeader" : "Commonly used Data Types do NOT Include:", 
+  "one" : "1. strings",
+  "two" : "2. booleans",
+  "three" : "3. alerts",
+  "four" : "4. numbers",
+  "correct" : "3. alerts",
   },{
    "quizQuestionHeader" : "String values must be enclosed within ________ when being assigned to variables",
    "one" : "1. commas",
@@ -77,11 +76,9 @@ function codeQuizChallenge() {
   header.style.display = "block"; 
   quizQuestionsPage.style.display = "none";
   finalScorePage.style.display = "none";
-
   var startScore = 0; // Starting time 
   timer.textContent = "Time: " + startScore;
 }
-
 
 function resetVariables() {
   startScore = 0; 
@@ -92,7 +89,6 @@ function resetVariables() {
 function startQuiz() { 
 quizChallengePage.style.display = "none"; 
 quizQuestionsPage.style.display = "block"; 
-
 secondsLeft = 80;
   var timerInterval = setInterval(function() { 
     secondsLeft--;
@@ -169,10 +165,9 @@ function showFinalScore() {
   initials.style.display = "block"
   initialBtn.style.display = "block"
   initialInput.style.display = "block"
-
-    finalScoreIs.textContent = "Your final score is " + secondsLeft;
-    initialBtn.textContent = "Submit"; // Form button 
-    initials.textContent = "Enter Your Initials: "; // Form text
+  finalScoreIs.textContent = "Your final score is " + secondsLeft;
+  initialBtn.textContent = "Submit"; // Form button 
+  initials.textContent = "Enter Your Initials: "; // Form text
 }
 
 var highScoreArray = []
@@ -188,19 +183,14 @@ function showHighScores() {
   highScoreButtons.style.display = "block"; // Show Final Score Page 
   
   var getInitials = document.getElementById("initialInput").value;
-
   var highScoreArray = JSON.parse(localStorage.getItem("highScore")) || [];
-  
   var localStorageArray = { score: secondsLeft, initials: getInitials };
   highScoreArray.push(localStorageArray)
   localStorage.setItem("highScore", JSON.stringify(highScoreArray));
-
   var highScores = getInitials + ": " + secondsLeft;
 
   $("#highScoreList").append(highScores)
 }
-
-// EVENT LISTENERS
 
 // START QUIZ
 submitBtn.addEventListener("click", function() { 
